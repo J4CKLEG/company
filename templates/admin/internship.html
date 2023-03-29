@@ -1,0 +1,75 @@
+
+{% load static %}
+{% block content %}
+{% include 'admin/menu.html' %}
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <ol class="breadcrumb mb-4">
+                        </ol>
+                        
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-chart-area me-1"></i>
+                                Add Internship
+                            </div>
+                            <div class="card-body"><form method="POST" action="courses">
+{% csrf_token %}
+<table>
+<tr>
+<td>Name:</td>
+<td><input type="text" name="name" class="form-control"><br><br></td>
+</tr>
+<tr>
+<td>Amount:</td>
+<td><input type="text" name="amount" class="form-control"><br><br></td>
+</tr>
+<tr>
+<td>Duration:</td>
+<td><input type="text" name="duration" class="form-control"><br><br></td>
+</tr>
+<tr>
+<td>Vaccancy:</td>
+<td><input type="text" name="vaccancy" class="form-control"><br><br></td>
+</tr>
+<tr>
+<td>Stipend:</td>
+<td><input type="text" name="stipend" class="form-control"><br><br></td>
+</tr>
+<tr>
+<td>Post date:</td>
+<td><input type="date" name="post date" class="form-control"><br><br></td>
+</tr>
+<tr>
+<td>Last date:</td>
+<td><input type="date" name="last date" class="form-control"><br><br></td>
+</tr>
+<tr>
+<td>Qualification:</td>
+<td><input type="text" name="qualification" class="form-control"><br><br></td>
+</tr>
+<tr>
+<td>Description:</td>
+<td><input type="text" name="description" class="form-control"><br><br></td>
+</tr>
+<tr>
+<td><input type="SUBMIT" name="REGISTER" class="btn btn-success"><br><br></td>
+</table>
+</form>
+</div>
+                       </div>
+                      
+                    </div>
+                </main>
+				
+				<footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Developed By Liji B Thomas</div>
+                            <div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+  {% include 'admin/footer.html' %}
+		{% endblock%}

@@ -1,0 +1,57 @@
+
+
+{% load static %}
+{% block content %}
+{% include 'admin/menu.html' %}
+
+
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Tables</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                            <li class="breadcrumb-item active">Tables</li>
+                        </ol>
+                       
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                DataTable Example
+                            </div>
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+										<th>Name</th>
+										<th>Email</th>
+										<th>phone No</th>
+										<th>Course</th>
+										<th>Address</th>
+                                        </tr>
+                                    </thead>
+									
+									{% for i in result %}
+							<tr>
+										<td>{{i.Name}}</td>
+										<td>{{i.Email}}</td>
+										<td>{{i.phone_No}}</td>
+										<td>{{i.Course}}</td>
+										<td>{{i.Address}}</td>
+										
+                                        </tr>
+                                  
+								  
+								  {% endfor %}
+                                    
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                
+            </div>
+        </div>
+
+{% include 'admin/footer.html' %}
+		{% endblock%}

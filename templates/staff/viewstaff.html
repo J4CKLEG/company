@@ -1,0 +1,69 @@
+
+
+{% load static %}
+{% block content %}
+{% include 'staff/menu.html' %}
+
+
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                    
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+View Profile                            </div>
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+										<th>Image</th>
+
+										<th>Name</th>
+										<th>Email</th>
+										<th>Password</th>
+										<th>User Name</th>
+										<th>phone No</th>
+										<th>Course</th>
+										<th>Address</th>
+									
+										
+                                    </thead>
+									
+							<tr>
+										<td><img src="../media/{{result.image}}" style="width:100px; height:100px;"></td>
+
+										<td>{{result.Name}}</td>
+										<td>{{result.Email}}</td>
+										<td>{{result.password}}</td>
+										<td>{{result.user}}</td>
+										<td>{{result.phone_No}}</td>
+										<td>{{result.Course}}</td>
+										<td>{{result.Address}}</td>
+										
+										
+
+                                        </tr>
+                                  
+								  
+                                    
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+				<footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Developed By Liji B Thomas</div>
+                            <div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                
+            </div>
+        </div>
+
+{% include 'admin/footer.html' %}
+		{% endblock%}

@@ -1,0 +1,63 @@
+          
+<!-- End Header -->
+{% load static %}
+{% block content %}
+{% include 'header.html' %}
+
+  <!-- ======= Hero Section ======= -->
+  
+  <section style="background-color:rgba(55, 64, 85, 0.9);" class="d-flex align-items-center justify-content-center">
+    <div class="container position-relative">
+     
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <ol class="breadcrumb mb-4">
+                        </ol>
+                        
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-chart-area me-1"></i>
+                                Feedback
+                            </div>
+                            <div class="card-body">
+							
+							<form method="POST" action="addfeedback">
+{% csrf_token %}
+<table>
+
+<tr>
+<td>Subject:</td>
+<td><input type="text" name="subject"   class="form-control"><br><br></td>
+</tr>
+<td>Description:</td>
+<td><textarea  name="des" class="form-control"></textarea><br><br></td>
+<tr>
+<td><input type="submit" name="SUBMIT" class="btn btn-success"></td>
+</tr>
+</td>
+<table>
+</form>
+							
+							
+							</div>
+                        </div>
+                      
+                    </div>
+                </main>
+				<footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Developed By Liji B Thomas</div>
+                            <div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+  {% include 'footer.html' %}
+		{% endblock%}
+

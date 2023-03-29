@@ -1,0 +1,75 @@
+
+
+{% load static %}
+{% block content %}
+{% include 'admin/menu.html' %}
+
+<br><br>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                       
+<br><br>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                View Students
+                            </div>
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+										<th>Name</th>
+										<th>Address</th>
+										<th>Pass Year</th>
+										<th>Phone Number</th>
+										<th>Username</th>
+										<th>Qualification</th>
+										<th>Email</th>
+										<th>Image</th>
+
+										<th>Approve</th>
+                                        </tr>
+                                    </thead>
+									
+									{% for i in result %}
+									
+							<tr>
+										<td>{{i.name}}</td>
+										<td>{{i.address}}</td>
+										<td>{{i.pass_year}}</td>
+										<td>{{i.phone_no}}</td>
+										<td>{{i.username}}</td>
+										<td>{{i.qualification}}</td>
+										<td>{{i.email}}</td>
+										<td><img src="../../media/{{i.image}}" style="height:100px; weight:100px;"></td>
+
+										<td><a href="{% url 'approved' id=i.id %}">Approved</a></td>
+										
+
+                                        </tr>
+                                  
+								  
+								  {% endfor %}
+                                    
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+				
+				<footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Developed By Liji B Thomas</div>
+                            <div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                
+            </div>
+        </div>
+
+{% include 'admin/footer.html' %}
+		{% endblock%}

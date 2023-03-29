@@ -1,0 +1,62 @@
+
+
+{% load static %}
+{% block content %}
+{% include 'admin/menu.html' %}
+
+<br><br>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                       
+<br><br>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                View Students Feedback
+                            </div>
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+										<th>Student Name</th>
+										<th>Subject</th>
+										<th>Feedback</th>
+										
+                                        </tr>
+                                    </thead>
+									
+									{% for i in result %}
+									
+							<tr>
+										<td>{{i.uid}}</td>
+										<td>{{i.subject}}</td>
+										<td>{{i.des}}</td>
+										
+
+                                        </tr>
+                                  
+								  
+								  {% endfor %}
+                                    
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+				
+				<footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Developed By Liji B Thomas</div>
+                            <div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                
+            </div>
+        </div>
+
+{% include 'admin/footer.html' %}
+		{% endblock%}

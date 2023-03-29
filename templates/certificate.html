@@ -1,0 +1,121 @@
+{% block content %}
+{% load static %}
+<html>
+    <head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'scss/main.css' %}">
+    <link rel="stylesheet" href="{% static 'scss/skin.css' %}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="{% static 'script/index.js' %}"></script>
+
+        <style type='text/css'>
+            body, html {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                color: black;
+                display: table;
+                font-family: Georgia, serif;
+                font-size: 24px;
+                text-align: center;
+            }
+            .container {
+                border: 20px solid tan;
+                width: 750px;
+                height: 563px;
+                display: table-cell;
+                vertical-align: middle;
+            }
+            .logo {
+                color: tan;
+            }
+
+            .marquee {
+                color: tan;
+                font-size: 48px;
+                margin: 20px;
+            }
+            .assignment {
+                margin: 20px;
+            }
+            .person {
+                border-bottom: 2px solid black;
+                font-size: 32px;
+                font-style: italic;
+                margin: 20px auto;
+                width: 400px;
+            }
+            .reason {
+                margin: 20px;
+            }
+			@media print {
+  .noPrint{
+    display:none;
+  }
+}
+h1{
+  color:#f6f6;
+}
+        </style>
+	<h1>
+</h1>
+<h1 class="noPrint">
+</h1>
+    <body>
+	<?php
+		  $con=mysqli_connect("localhost","root","","tutelage");
+		  $sel="select * from certificate where id='$_REQUEST[id]'";
+		  $res=mysqli_query($con,$sel);
+		  $row=mysqli_fetch_array($res);
+		  
+			$sel1="select * from user where id='$row[username]'";
+		  $res1=mysqli_query($con,$sel1);
+		  $row1=mysqli_fetch_array($res1);
+		    		
+		?>
+		<div>
+		<center>
+        <div class="container">
+            <div class="logo">
+<?php echo $row['companyname'];?>      
+      </div>
+
+            <div class="marquee">
+                Certificate of Completion
+            </div>
+
+            <div class="assignment">
+                This  is  to certify
+            </div>
+
+            <div class="person">
+<?php echo $row1['name'];  ?>
+            </div>
+
+            <div class="reason">
+as a <?php echo $row['companyname']; ?> for completing internship for a period of <?php echo $row['duration']; ?>
+    months       
+
+		   </div>
+		   <?php echo $row['date']; ?>
+		   <br><br>
+		   <hr style='width:150px;'>
+		   <H6>AUTHORIZED SIGNATORY</H6>
+        </div></center>
+</div>
+<br><br>
+		<button onclick="window.print();" class="noPrint btn btn-primary">
+Print Me
+</button><br><br>
+<a href="index.php" class="btn btn-danger">HOME</a>
+    </body>
+	
+</html>
+{% endblock %}

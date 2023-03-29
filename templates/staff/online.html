@@ -1,0 +1,56 @@
+
+{% load static %}
+{% block content %}
+{% include 'staff/menu.html' %}
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item"><a href="index.html"></a></li>
+                        </ol>
+                        
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-chart-area me-1"></i>
+                                Online Class
+                            </div>
+                            <div class="card-body">
+							<form method="POST" action="onlineclasss">
+{% csrf_token %}
+<table>
+<tr>
+<td><input type="hidden" name="staffid" value="{{result.Name}}" class="form-control"></td><br>
+
+</tr>
+<tr>
+<td>Link</td>
+<td><input type="text" name="link" class="form-control"></td>
+</tr>
+<tr>
+<td>Date</td>
+<td><input type="date" name="date" class="form-control"></td>
+</tr>
+<tr>
+<td><input type="hidden" name="internshipid" value="{{result.Course}}" class="form-control"></td>
+</tr>
+<tr>
+<td><input type="SUBMIT" name="REGISTER" class="btn btn-success"></td>
+</table>
+</form>
+</div>
+                       </div>
+                      
+                    </div>
+                </main>
+				
+				<footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Developed By Liji B Thomas</div>
+                            <div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+  {% include 'admin/footer.html' %}
+		{% endblock%}

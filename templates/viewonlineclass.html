@@ -1,0 +1,66 @@
+
+
+<!-- End Header -->
+{% load static %}
+{% block content %}
+{% include 'header.html' %}
+
+  <!-- ======= Hero Section ======= -->
+  
+  <section style="background-color:rgba(55, 64, 85, 0.9);" class="d-flex align-items-center justify-content-center">
+    <div class="container position-relative">
+     
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+
+
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">View Online Class</h1>
+                        <ol class="breadcrumb mb-4">
+                        </ol>
+                       
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                            </div>
+                            <div class="card-body">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+										<th>Staff Id</th>
+										<th>Link</th>
+										<th>Date</th>
+										<th>Internship Id</th>
+										
+                                    </thead>
+									
+									{% for i in result %}
+							<tr>
+										<td>{{i.staffid}}</td>
+										<td><a href="https://meet.google.com/" target="_blank">{{i.link}}</a></td>
+										<td>{{i.date}}</td>
+										<td>{{i.internshipid}}</td>
+										
+										
+
+                                        </tr>
+                                  
+								  
+								  {% endfor %}
+                                    
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                
+            </div>
+        </div>
+
+{% include 'header.html' %}
+		{% endblock%}

@@ -1,0 +1,135 @@
+{% load static %}
+{% block content %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- basic -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- mobile metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<!-- site metas -->
+<title>Adio</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">	
+<!-- bootstrap css -->
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css '%}">
+<!-- style css -->
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css '%}">
+<!-- Responsive-->
+<link rel="stylesheet" href="{% static 'css/responsive.css ' %}">
+<!-- fevicon -->
+<link rel="icon" href="{% static 'images/fevicon.png '%}" type="image/gif" />
+<!-- Scrollbar Custom CSS -->
+<link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css '%}">
+<!-- Tweaks for older IEs-->
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<!-- owl stylesheets --> 
+<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css '%}">
+<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css '%}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
+</head>
+<body>
+	<!--header section start -->
+	<div class="header_section">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-2">
+					<div class="logo"><a href="index.html"><img src="{% static 'images/logo.png '%}"></a></div>
+				</div>
+				<div class="col-sm-6">
+					<div class="menu-area">
+                    <nav class="navbar navbar-expand-lg ">
+                        <!-- <a class="navbar-brand" href="#">Menu</a> -->
+                        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-bars"></i>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                           
+                        </div>
+                    </nav>
+          </div>
+				</div>		
+				<div class="col-sm-4">
+            <ul class="top_button_section">
+			<li class="nav-item auto">
+			 
+                                <a class="login-bt active" href="{% url 'index' %}">Home<span class="sr-only"></span></a> </li>
+               <li><a class="login-bt " href="{% url 'login' %}">Login</a></li>
+               <li><a class="login-bt" href="{% url 'addregg' %}">Register</a></li>
+			
+               <li class="search"><a href="#"><img src="{% static 'images/search-icon.png '%}" alt="#" /></a></li>
+            </ul>
+					</div>
+			</div>
+ <div class="row">
+      <div class="banner_section layout_padding">
+      <section>
+         <div id="main_slider" class="section carousel slide banner-main" data-ride="carousel">
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                    <div class="container">
+                     <div class="row marginii">
+                        <div class="col-md-5 col-sm-12">
+                           <div class="carousel-sporrt_text ">
+                              <h1 class="banner_taital">Classified Ads</h1>
+                    <p class="lorem_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
+                           </div>
+                        </div>
+                        <div class="col-md-7 col-sm-12">
+                           <div class="img-box">
+                              <figure><img src="{% static 'images/banner-img1.png '%}" style="max-width: 100%;"/></figure>
+                           </div>
+                        </div>
+                    </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                    <div class="container">
+                     <div class="row marginii">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="carousel-sporrt_text ">
+                              <h1 class="banner_taital">Classified Ads</h1>
+                    <p class="lorem_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
+                           </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="img-box">
+                              <figure><img src="{% static 'images/banner-img1.png'%}" style="max-width: 100%;"/></figure>
+                           </div>
+                        </div>
+                    </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                    <div class="container">
+                     <div class="row marginii">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="carousel-sporrt_text ">
+                              <h1 class="banner_taital">Classified Ads</h1>
+                    <p class="lorem_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
+                           </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="img-box">
+                              <figure><img src="{% static 'images/banner-img1.png '%}" style="max-width: 100%;"/></figure>
+                           </div>
+                        </div>
+                    </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+    </div>
+    </div>
+
+		</div>
+	
+	{% endblock %}

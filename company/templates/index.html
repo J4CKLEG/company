@@ -1,0 +1,147 @@
+{% load static %}
+{% block content %}
+{% include 'header.html' %}
+
+       
+   
+        <!--header section end -->
+        
+		</div>
+	</div> 
+		</div>
+	</div>
+    <!--banner section end -->
+	<!--about section start -->
+    <div class="about_section layout_padding">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-6">
+    				<div class="tablet"><img src="{% static 'images/tablet-img.png '%}"></div>
+    			</div>
+    			<div class="col-md-6">
+    				<div class="about_taital">
+    					<div class="about_text">About <span style="color: #c6610f;">Us</span></div>
+    					<p class="dolor_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    <div class="about_section_2 ">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-sm-12">
+    				<div class="classified_text">ONE OF THE BEST <span style="color: #c6610f;">CLASSIFIED</span></div>
+    			</div>	
+    		</div>
+    		<div class="row front">
+    			<div class="col-md-2">
+    				<div class="about_img"><img src="{% static 'images/img-1.png ' %}"></div>
+    			</div>
+    			<div class="col-md-10">
+    				<h1 class="fron_text"> FRONT END MULTICURRENCY</h1>
+    				<p class="using_text">using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model</p>
+    			</div>
+    		</div>
+    		<div class="row front">
+    			<div class="col-md-2">
+    				<div class="about_img"><img src="{% static 'images/img-1.png '%}"></div>
+    			</div>
+    			<div class="col-md-10">
+    				<h1 class="fron_text"> FRONT END MULTICURRENCY</h1>
+    				<p class="using_text">using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model</p>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+	<!--about section end -->
+	<!--client section start -->
+ 
+ 
+ 
+ 
+ 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!--footer section start -->
+	
+	
+	<!--footer section end -->
+
+      <!-- Javascript files-->
+      <script src="{% static 'js/jquery.min.js '%}"></script>
+      <script src="{% static 'js/popper.min.js '%}"></script>
+      <script src="{% static 'js/bootstrap.bundle.min.js '%}"></script>
+      <script src="{% static 'js/jquery-3.0.0.min.js '%}"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js '%}"></script>
+      <script src="{% static 'js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="{% static 'js/owl.carousel.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js '%}"></script>
+      <script>
+         $(document).ready(function(){
+         $(".fancybox").fancybox({
+         openEffect: "none",
+         closeEffect: "none"
+         });
+         </script>	
+
+
+         <script>
+      // This example adds a marker to indicate the position of Bondi Beach in Sydney,
+      // Australia.
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 11,
+          center: {lat: 40.645037, lng: -73.880224},
+          });
+
+        var image = 'images/location_point.png';
+          var beachMarker = new google.maps.Marker({
+             position: {lat: 40.645037, lng: -73.880224},
+             map: map,
+             icon: image
+          });
+        }
+        </script>
+        <!-- google map js -->
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
+        <!-- end google map js -->
+</body>
+</html>
+{% include 'footer.html' %}
+{% endblock %}

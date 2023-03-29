@@ -1,0 +1,29 @@
+html>
+<head>
+<title></title>
+<body>
+<form method="POST" enctype="multipart/form-data" action="gettask">
+{% csrf_token %}>
+<table>
+<tr>
+<td>Note_id:</td>
+<td><input type="text" name="staffid"><br><br></td>
+</tr>
+<tr>
+<td>Upload File</td>
+<td><input type="file" name="link"><br><br></td>
+</tr>
+<td>Date</td>
+<td><input type="date" name="date"><br><br></td>
+<tr>
+<td>Intership_id</td>
+<td><input type="text" name="internship"><br><br></td>
+</tr>
+<td><input type="submit" name="SUBMIT"></td>
+</tr>
+</td>
+<table>
+</form>
+</body>
+</head>
+</html>
